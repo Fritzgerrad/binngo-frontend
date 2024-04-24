@@ -1,9 +1,11 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from 'next/router';
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const router = useRouter();  
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -11,7 +13,7 @@ const Header = () => {
 
   const MyLink = (props) => {
     return (
-      <li className="mx-3 hover:underline w-max m-2 font-bold">
+      <li className="mx-3 hover:underline w-max m-2 font-medium">
         <Link onClick={toggleMenu} href={props.href}>{props.text}</Link>
       </li>
     );
@@ -32,7 +34,7 @@ const Header = () => {
             />
           </div>
           <button
-            className="burger-icon lg:hidden float-right my-5 sm:m-5"
+            className="burger-icon sm:hidden float-right my-5 sm:m-5"
             onClick={toggleMenu}
             aria-label="Toggle Menu"
     
@@ -40,9 +42,13 @@ const Header = () => {
             <span className="text-4xl text-white"
             >&#9776; </span>{/* Burger Icon */}
           </button>
-          <nav className={`lg:flex float-right  hidden`}>
-            <ul className="lg:flex lg:justify-between  p-3">
-              <MyLink href="#home" text="Home" />
+          <nav className={`sm:flex float-right  hidden`}>
+            <ul className="sm:flex md:justify-between  p-3">
+              <h1 
+                onClick={()=>{router.reload();}}
+                className="mt-2 font-bold hover:underline"
+              >
+                Home </h1>
               <MyLink href="#home" text="About Us" />
               <MyLink href="#howItWorks" text="How it Works" />
               <MyLink href="#contactUs" text="Contact Us" />
@@ -54,13 +60,13 @@ const Header = () => {
         
 
       </div>
-      <div className="flex justify-center" style={{marginLeft:"100%"}}>
+      <div className="flex justify-center ridge ml-14 sm:ml-40">
         <div className={`${showMenu ? 'block' : 'hidden'}`}>
           <div className="float-right">
-          <div className=" lg:hidden">
+          <div className=" sm:hidden">
             <nav>
-            <div className="h-24 lg:h-0 bg-white"></div>
-              <ul className="header float-right">
+            <div className="h-24 sm:h-0 bg-white"></div>
+              <ul className="header float-right px-10">
                 <MyLink href="#home" text="Home" />
                 <MyLink href="#home" text="About Us" />
                 <MyLink href="#howItWorks" text="How it Works" />

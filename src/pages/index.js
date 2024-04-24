@@ -8,9 +8,12 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+
+
   const DetailList =(props)=>{
     return(
       <>
@@ -95,7 +98,8 @@ const MyCarousel = () => {
 
 
   return (
-    <>      <Head>
+    <>      
+      <Head>
         <title>BinNGo</title>
         <link rel="icon" href="/assets/logoBin.jpeg" />
       </Head>
@@ -116,21 +120,15 @@ const MyCarousel = () => {
                 />
             </div>
             <div className="block sm:px-5 items-center ">
-              <Image
-                src="/assets/logoLight.jpeg"
-                alt="logo"
-                className="md:w-44 lg:w-64 sm:w-96"
-                width={400}
-                height={10}
-              />
-              <h1 className="mt-3 text-2xl lg:text-4xl sm:text-3xl tracking-tighter font-bold">
+            
+              <h1 className="mt-3 text-3xl lg:text-4xl sm:text-3xl tracking-tighter font-bold">
                 Effortless Trash Disposal, Right at Your Doorstep!
                 </h1>
-              <h4 className="text-base sm:text-lg font-medium mb-4">
-                Your Ally to Better Living—We handle the mess so you don&apos;t have to
+              <h4 className="text-base sm:text-lg font-medium mb-4 text-right sm:w-2/5 w-4/5">
+                ...Your Ally to Better Living
               </h4>
-              <p className="font-light text-base">
-                At BinNGo, we believe that managing household waste <span id="howItWorks"></span>should be simple, clean, and environmentally friendly. Founded by a team passionate about sustainability and convenience, our mission is to make trash collection seamless and hassle-free. We&apos;re not just a service; we&apos;re your ally to a cleaner, greener home. Let us take care of the waste, so you can focus on what truly matters in your life.
+              <p className="font-light text-xl">
+                At BinNGo, we believe that managing household waste <span id="howItWorks"></span>should be simple, clean, and environmentally friendly. We handle the mess so you don&apos;t have to. Founded by a team passionate about sustainability and convenience, our mission is to make trash collection seamless and hassle-free. We&apos;re not just a service; we&apos;re your ally to a cleaner, greener home. Let us take care of the waste, so you can focus on what truly matters in your life.
               </p>
             </div>
           </div>
@@ -138,11 +136,8 @@ const MyCarousel = () => {
        
       </div>
       <div className="flex justify-start " >
-        <div className=" w-full md:w-4/5">
-          <h1 className="mt-3 text-xl lg:text-4xl sm:text-3xl tracking-tighter font-normal sm:text-center lg:text-justify">
-              A Simple Solution to Waste Management  
-          </h1>
-          <h4 className="text-base sm:text-3xl font-bold mb-4 text-center lg:text-justify">
+        <div className=" w-full">
+          <h4 className="text-3xl sm:text-5xl font-bold mb-4 text-center">
             How BinNGo Works 
           </h4>
             <ul className="hidden lg:flex px-3" >
@@ -155,7 +150,7 @@ const MyCarousel = () => {
               <DetailList
                 title="Dispose"
                  details="Simply dispose of your trash into the provided bins at your convenience—no fuss, no muss."
-                imgName="dispose1"
+                imgName="dispose"
               />
               <DetailList
                 title="Collect"
@@ -174,29 +169,16 @@ const MyCarousel = () => {
             </div>
 
         </div>
-        {/* <div className="hidden lg:block">
-          <Image
-                src="/assets/binGreen.png"
-                alt="logo"
-                // className="md:w-44 lg:w-72 sm:w-96"
-                className="w-full"
-                width={400}
-                height={10}
-          />
-
-        </div> */}
+  
       </div>
-      <div className="w-full sm:w-3/5" id="contactUs">
-      <h1 className="mt-3 text-2xl lg:text-4xl sm:text-3xl tracking-tighter font-bold">
+      <div className="w-full " id="contactUs">
+      <h1 className="mt-3 text-3xl lg:text-5xl sm:text-3xl tracking-tighter font-bold text-center">
           Contact Us          
       </h1>
-      <h4 className="text-base sm:text-lg font-medium mb-4">
-          Get in touch wih BinNGo      
-      </h4>
-      <p className="font-light text-base">
+      <p className="font-light text-lg">
       Ready to simplify your trash disposal? Have questions or need more details? Contact us today! Just click below and you&apos;ll be directed to email our management team. We&apos;re here to help you with your waste management needs.
       <a 
-      className="text-lg hover:text-red-900 mr-3 hover:underline"
+      className="text-lg text-red-900 mr-3 underline"
       href="mailto:chinedunwosu54@gmail.com?subject=Enquiry%20about%20BinNGo%20"> Click here to send a mail</a>
       </p>
       </div>
