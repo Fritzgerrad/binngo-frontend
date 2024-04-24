@@ -127,17 +127,17 @@ const MyCarousel = () => {
                 Effortless Trash Disposal, Right at Your Doorstep!
                 </h1>
               <h4 className="text-base sm:text-lg font-medium mb-4">
-                Your Ally to Better Living—We handle the mess so you don’t have to
+                Your Ally to Better Living—We handle the mess so you don&apos;t have to
               </h4>
               <p className="font-light text-base">
-                At BinNGo, we believe that managing household waste should be simple, clean, and environmentally friendly. Founded by a team passionate about sustainability and convenience, our mission is to make trash collection seamless and hassle-free. We're not just a service; we're your ally to a cleaner, greener home. Let us take care of the waste, so you can focus on what truly matters in your life.
+                At BinNGo, we believe that managing household waste <span id="howItWorks"></span>should be simple, clean, and environmentally friendly. Founded by a team passionate about sustainability and convenience, our mission is to make trash collection seamless and hassle-free. We&apos;re not just a service; we&apos;re your ally to a cleaner, greener home. Let us take care of the waste, so you can focus on what truly matters in your life.
               </p>
             </div>
           </div>
         </div>
        
       </div>
-      <div className="flex justify-start ">
+      <div className="flex justify-start " >
         <div className=" w-full md:w-4/5">
           <h1 className="mt-3 text-xl lg:text-4xl sm:text-3xl tracking-tighter font-normal sm:text-center lg:text-justify">
               A Simple Solution to Waste Management  
@@ -186,7 +186,7 @@ const MyCarousel = () => {
 
         </div> */}
       </div>
-      <div className="w-full sm:w-3/5">
+      <div className="w-full sm:w-3/5" id="contactUs">
       <h1 className="mt-3 text-2xl lg:text-4xl sm:text-3xl tracking-tighter font-bold">
           Contact Us          
       </h1>
@@ -194,7 +194,7 @@ const MyCarousel = () => {
           Get in touch wih BinNGo      
       </h4>
       <p className="font-light text-base">
-      Ready to simplify your trash disposal? Have questions or need more details? Contact us today! Just click below and you’ll be directed to email our management team. We’re here to help you with your waste management needs.
+      Ready to simplify your trash disposal? Have questions or need more details? Contact us today! Just click below and you&apos;ll be directed to email our management team. We&apos;re here to help you with your waste management needs.
       <a 
       className="text-lg hover:text-red-900 mr-3 hover:underline"
       href="mailto:chinedunwosu54@gmail.com?subject=Enquiry%20about%20BinNGo%20"> Click here to send a mail</a>

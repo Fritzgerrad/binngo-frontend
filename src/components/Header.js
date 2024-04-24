@@ -12,7 +12,7 @@ const Header = () => {
   const MyLink = (props) => {
     return (
       <li className="mx-3 hover:underline w-max m-2 font-bold">
-        <Link href={props.href}>{props.text}</Link>
+        <Link onClick={toggleMenu} href={props.href}>{props.text}</Link>
       </li>
     );
   };
@@ -43,7 +43,7 @@ const Header = () => {
           <nav className={`lg:flex float-right  hidden`}>
             <ul className="lg:flex lg:justify-between  p-3">
               <MyLink href="#home" text="Home" />
-              <MyLink href="#aboutUs" text="About Us" />
+              <MyLink href="#home" text="About Us" />
               <MyLink href="#howItWorks" text="How it Works" />
               <MyLink href="#contactUs" text="Contact Us" />
             </ul>
@@ -62,7 +62,7 @@ const Header = () => {
             <div className="h-24 lg:h-0 bg-white"></div>
               <ul className="header float-right">
                 <MyLink href="#home" text="Home" />
-                <MyLink href="#aboutUs" text="About Us" />
+                <MyLink href="#home" text="About Us" />
                 <MyLink href="#howItWorks" text="How it Works" />
                 <MyLink href="#contactUs" text="Contact Us" />
               </ul>
