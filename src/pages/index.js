@@ -148,7 +148,7 @@ const MyCarousel = () => {
             <ul className="hidden lg:flex px-3" >
               <DetailList
                 title="Equip"
-                details="We provide tailored trash bins for all units within our service area, ensuring you have just what you need for efficient waste management."
+                details="We provide tailored trash bins for all units within our service area."
                 imgName="equip"
               />
               
@@ -159,7 +159,7 @@ const MyCarousel = () => {
               />
               <DetailList
                 title="Collect"
-                 details="Our dedicated team collects the trash from your doorstep on scheduled days, ensuring timely and effective removal."
+                 details="Our team collects the trash from your doorstep on scheduled days, ensuring effective removal."
                 imgName="collect"
               />
               <DetailList
@@ -194,7 +194,10 @@ const MyCarousel = () => {
           Get in touch wih BinNGo      
       </h4>
       <p className="font-light text-base">
-      Ready to simplify your trash disposal? Have questions or need more details? Contact us today! Just click below and you’ll be directed to email our management team. We’re here to help you with your waste management needs
+      Ready to simplify your trash disposal? Have questions or need more details? Contact us today! Just click below and you’ll be directed to email our management team. We’re here to help you with your waste management needs.
+      <a 
+      className="text-lg hover:text-red-900 mr-3 hover:underline"
+      href="mailto:chinedunwosu54@gmail.com?subject=Enquiry%20about%20BinNGo%20"> Click here to send a mail</a>
       </p>
       </div>
       
