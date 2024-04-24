@@ -15,10 +15,10 @@ export default function Home() {
     return(
       <>
       <div
-        className="my-2 text-lg font-light mx-2 lg:w-1/4 w-4/5 flex justify-center">
+        className="my-2 text-xl font-light mx-2 lg:w-1/4 w-4/5 flex justify-center">
         <div className="rounded-md border-2 p-4">
         <h1
-        className="text-xl font-bold mx-1 text-center">
+        className="text-2xl font-bold mx-1 text-center">
         {props.title}
         </h1>
         <div className="flex justify-center m-2">
