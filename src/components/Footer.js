@@ -40,14 +40,18 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="block md:flex md:justify-between m-2 ml-0">
-                    <div className="md:flex block">
-                        <Link href="#top" className=" uppercase text-xs hover:text-red-600 m-2">Privacy Policy</Link>
-                        <Link href="#top" className="uppercase text-xs hover:text-red-600 m-2">Term of Use</Link>
-                        <Link href="#top" className="uppercase text-xs hover:text-red-600 m-2">Sitemap</Link>
-                        <Link href="#top" className="uppercase text-xs hover:text-red-600 m-2">Accessibility</Link>
+                    <div className="flex">
+                        <div className="flex sm:flex-row flex-col">
+                            <Link href="#top" className=" uppercase text-xs hover:text-red-600 m-2">Privacy Policy</Link>
+                            <Link href="#top" className="uppercase text-xs hover:text-red-600 m-2">Term of Use</Link>
+                        </div>
+                        <div className="flex sm:flex-row flex-col">
+                            <Link href="#top" className="uppercase text-xs hover:text-red-600 m-2">Sitemap</Link>
+                            <Link href="#top" className="uppercase text-xs hover:text-red-600 m-2">Accessibility</Link>
+                        </div>
                     </div>
                     <div className="md:float-right flex text-xs">
-                        <Link href="#top" className="text-xs text-red-600 mr-3 hover:underline">Back to Top</Link>
+                        <Link href="#top" className="text-xs text-red-600 mr-3 hover:underline ml-2">Back to Top</Link>
                         <p className="text-white">&#169; 2024 FRZ Group</p>
                     </div>
                 </div>

@@ -20,7 +20,7 @@ const Header = () => {
   };
 
   return (
-    < div className="fixed flex justify-center">
+    < div className="fixed flex justify-center front sm:ml-8 lg:ml-24">
     <div className="block">
       <div className=" mb-0">
         <div className="m-5 header w-4/5 rounded-full fixed px-5">
@@ -44,11 +44,11 @@ const Header = () => {
           </button>
           <nav className={`sm:flex float-right  hidden`}>
             <ul className="sm:flex md:justify-between  p-3">
-              <h1 
+              <button
                 onClick={()=>{router.reload();}}
-                className="mt-2 font-bold hover:underline"
+                className=" font-bold hover:underline"
               >
-                Home </h1>
+                Home </button>
               <MyLink href="#home" text="About Us" />
               <MyLink href="#howItWorks" text="How it Works" />
               <MyLink href="#contactUs" text="Contact Us" />

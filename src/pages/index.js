@@ -13,12 +13,35 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
 
+  const ConcernList =(props) =>{
+    return(
+      <div className="sm:m-2 p-2 flex justify-center sm:w-4/5 w-full">
+        <div className="w-full sm:w-11/12">
+          <h3 className="text-3xl text-center">{props.person}</h3>
+          <h3 className="text-lg text-center mb-2 font-light">{props.location}</h3>
+          <div className="border-3 border-opacity-50 border-red-900 rounded-b-full rounded-t-3xl p-3 darkBlue text-white w-full h-80 p-5">
+          <div className="flex justify-center">
+          <Image 
+            src={`/assets/${props.imgName}.jpeg`}
+            height={20}
+            className="w-36 rounded-full"
+            width={120}
+            alt={props.imgName}
+          />
+          </div>
+          <div className="w-full p-3 text-center"><p className="font-extralight">{props.concern}</p></div>
+        </div>
+        </div>
+      </div>
+    )
+  }
+
 
   const DetailList =(props)=>{
     return(
       <>
       <div
-        className="my-2 text-xl font-light mx-2 lg:w-1/4 w-4/5 flex justify-center">
+        className="my-2 text-lg font-light mx-2 lg:w-1/4 w-4/5 flex justify-center">
         <div className="rounded-md border-2 p-4">
         <h1
         className="text-2xl font-bold mx-1 text-center">
@@ -42,9 +65,20 @@ export default function Home() {
     )
   }
 
+  const sliderSettings = {
+    dots: true,
+    className:"",
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  };
 
 
-const MyCarousel = () => {
+
+const HowItWorksCarousel = () => {
   const details = [
     {
       title: 'Equip',
@@ -54,7 +88,7 @@ const MyCarousel = () => {
     {
       title: 'Dispose',
       details: 'Simply dispose of your trash into the provided bins at your convenience—no fuss, no muss.',
-      imgName: 'dispose1',
+      imgName: 'dispose',
     },
     {
       title: 'Collect',
@@ -68,16 +102,6 @@ const MyCarousel = () => {
     },
   ];
 
-  const sliderSettings = {
-    dots: true,
-    className:"",
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-  };
 
   return (
     <Slider {...sliderSettings}
@@ -95,22 +119,67 @@ const MyCarousel = () => {
     </Slider>
   );
 };
+               
 
+
+  const CustomerConcernCarausel = ()=>{
+  const details = [
+    {
+      person:"Jason",
+      location:"Louisiana, USA",
+      imgName:"person1",
+      concern:"Walking to the dumpster after dark feels risky and inconvenient, especially when I'm back late from work."
+    },
+    {
+      person:"Becky" ,
+      location:"Oklahoma, USA",
+      imgName:"person2",
+      concern:"The dumpster is too far from my unit, and it's exhausting to carry heavy trash bags that distance after a long day."
+    
+    },
+    {
+      person:"Chris", 
+      location:"Indiana, USA",
+      imgName:"person3",
+      concern:"Walking to the dumpster late at night makes me uncomfortable. It's poorly lit and quite isolated, which doesn't feel safe"  
+    },
+  ];
+
+
+  return (
+    <Slider {...sliderSettings}
+    className="w-full my-4"
+    >
+      {details.map((detail, index) => (
+        <div key={index}
+        className="flex justify-center pl-7 sm:pl-20"
+        style={{display:"flex"}}
+        >
+          <ConcernList person={detail.person} concern={detail.concern} imgName={detail.imgName} location={detail.location}/>
+        </div>
+      ))}
+
+    </Slider>
+  );
+
+  }
 
   return (
     <>      
       <Head>
         <title>BinNGo</title>
-        <link rel="icon" href="/assets/logoBin.jpeg" />
+        <link rel="icon" href="/assets/logoBin.png" />
       </Head>
     <div className="p-4 sm:px-6" id="#top">
 
       <Header />
+      <div className="flex justify-center">
+      <div className="sm:w-5/6 w-full">
       <div className="h-24 bg-white"></div>
       <div className=" flex justify-center my-4 ">
         <div className="block">
           <div className="flex items-center">
-            <div className="hidden lg:block w-full">
+            <div className="hidden lg:block">
               <Image
                   src="/assets/binGreen.png"
                   alt="logo"
@@ -119,16 +188,17 @@ const MyCarousel = () => {
                   height={10}
                 />
             </div>
-            <div className="block sm:px-5 items-center ">
+            <div className="block sm:px-5 items-center lg:w-3/5">
             
               <h1 className="mt-3 text-3xl lg:text-4xl sm:text-3xl tracking-tighter font-bold">
                 Effortless Trash Disposal, Right at Your Doorstep!
-                </h1>
-              <h4 className="text-base sm:text-lg font-medium mb-4 text-right sm:w-2/5 w-4/5">
+                <br className="sm:hidden"/>
+              <span className="text-base sm:text-lg ml-5 font-medium tracking-tight text-red-400 mb-4 text-right sm:w-3/5 w-4/5">
                 ...Your Ally to Better Living
-              </h4>
-              <p className="font-light text-xl">
-                At BinNGo, we believe that managing household waste <span id="howItWorks"></span>should be simple, clean, and environmentally friendly. We handle the mess so you don&apos;t have to. Founded by a team passionate about sustainability and convenience, our mission is to make trash collection seamless and hassle-free. We&apos;re not just a service; we&apos;re your ally to a cleaner, greener home. Let us take care of the waste, so you can focus on what truly matters in your life.
+              </span>
+              </h1>
+              <p className="font-light text-lg mt-2">
+                We believe that managing household waste <span id="howItWorks"></span>should be simple, clean, and environmentally friendly. We handle the mess so you don&apos;t have to. Founded by a team passionate about sustainability and convenience, our mission is to make trash collection seamless and hassle-free. We&apos;re not just a service; we&apos;re your ally to a cleaner, greener home. Let us take care of the waste, so you can focus on what truly matters in your life.
               </p>
             </div>
           </div>
@@ -137,7 +207,7 @@ const MyCarousel = () => {
       </div>
       <div className="flex justify-start " >
         <div className=" w-full">
-          <h4 className="text-3xl sm:text-5xl font-bold mb-4 text-center">
+          <h4 className="text-3xl sm:text-4xl font-bold mb-4 text-center">
             How BinNGo Works 
           </h4>
             <ul className="hidden lg:flex px-3" >
@@ -149,7 +219,7 @@ const MyCarousel = () => {
               
               <DetailList
                 title="Dispose"
-                 details="Simply dispose of your trash into the provided bins at your convenience—no fuss, no muss."
+                 details="Simply dispose of your trash into the provided bins at your convenience"
                 imgName="dispose"
               />
               <DetailList
@@ -165,24 +235,55 @@ const MyCarousel = () => {
               
             </ul>
             <div className="lg:hidden w-full">
-              <MyCarousel />
+              <HowItWorksCarousel />
             </div>
 
         </div>
   
       </div>
+      <div>
+        <h4 className="text-3xl sm:text-4xl font-bold mb-4 mt-8 text-center">
+          Customer Concerns
+        </h4>
+        <div className=" hidden lg:flex">
+              <ConcernList
+                person="Jason"
+                location="Louisiana, USA"
+                imgName="person1"
+                concern="Walking to the dumpster after dark feels risky and inconvenient, especially when I'm back late from work."
+              />
+              <ConcernList
+                person="Becky"
+                location="Oklahoma, USA"
+                imgName="person2"
+                concern="The dumpster is too far from my unit, and it's exhausting to carry heavy trash bags that distance after a long day."
+              />
+              <ConcernList
+                person="Chris"
+                location="Indiana, USA"
+                imgName="person3"
+                concern="Walking to the dumpster late at night makes me uncomfortable. It&apos;s poorly lit and quite isolated, which doesn&apos;t feel safe"
+              />
+        </div>
+        <div className="lg:hidden">
+          <CustomerConcernCarausel />
+        </div>
+      </div>
       <div className="w-full " id="contactUs">
-      <h1 className="mt-3 text-3xl lg:text-5xl sm:text-3xl tracking-tighter font-bold text-center">
+      <h1 className="text-3xl sm:text-4xl font-bold mb-4 mt-8 text-center">
           Contact Us          
       </h1>
+      
       <p className="font-light text-lg">
-      Ready to simplify your trash disposal? Have questions or need more details? Contact us today! Just click below and you&apos;ll be directed to email our management team. We&apos;re here to help you with your waste management needs.
+      Ready to simplify your trash disposal? Have questions or need more details? Contact us today! Just click below and you&apos;ll be directed to email our management team. We&apos;re here to help you with your waste management needs. 
       <a 
-      className="text-lg text-red-900 mr-3 underline"
-      href="mailto:chinedunwosu54@gmail.com?subject=Enquiry%20about%20BinNGo%20"> Click here to send a mail</a>
+      className="text-lg text-red-900 mx-2 underline"
+      href="mailto:chinedunwosu54@gmail.com?subject=Enquiry%20about%20BinNGo%20">Click here</a>to send a mail.
       </p>
       </div>
+      </div>
       
+    </div>
     </div>
     <Footer />
     </>

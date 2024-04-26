@@ -70,3 +70,15 @@ body{
   
 }
 
+.front{
+  z-index: 1000;
+}
+
+.darkBlue{
+  background-color: #0C2741;
+}
+
+.teal{
+  color: #4AF5D7;
+}
+
