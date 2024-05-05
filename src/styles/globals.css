@@ -82,3 +82,19 @@ body{
   color: #4AF5D7;
 }
 
+.slide-in{
+  animation: slideIn 2s forwards;
+  opacity: 0;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+

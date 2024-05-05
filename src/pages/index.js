@@ -41,7 +41,7 @@ export default function Home() {
     return(
       <>
       <div
-        className="my-2 text-lg font-light mx-2 lg:w-1/4 w-4/5 flex justify-center">
+        className="my-2 text-lg font-light mx-2 lg:w-1/4 w-full flex justify-center">
         <div className="rounded-md border-2 p-4">
         <h1
         className="text-2xl font-bold mx-1 text-center">
@@ -51,7 +51,7 @@ export default function Home() {
           <Image 
             src={`/assets/${props.imgName}.jpeg`}
             className=""
-            alt={props.name}
+            alt={props.imgName}
             height={10}
             width={120}
             />
@@ -126,7 +126,7 @@ const HowItWorksCarousel = () => {
   const details = [
     {
       person:"Jason",
-      location:"Louisiana, USA",
+      // location:"Louisiana, USA",
       imgName:"person1",
       concern:"Walking to the dumpster after dark feels risky and inconvenient, especially when I'm back late from work."
     },
@@ -139,7 +139,7 @@ const HowItWorksCarousel = () => {
     },
     {
       person:"Chris", 
-      location:"Indiana, USA",
+      // location:"Indiana, USA",
       imgName:"person3",
       concern:"Walking to the dumpster late at night makes me uncomfortable. It's poorly lit and quite isolated, which doesn't feel safe"  
     },
@@ -190,11 +190,11 @@ const HowItWorksCarousel = () => {
             </div>
             <div className="block sm:px-5 items-center lg:w-3/5">
             
-              <h1 className="mt-3 text-3xl lg:text-4xl sm:text-3xl tracking-tighter font-bold">
-                Effortless Trash Disposal, Right at Your Doorstep!
-                <br className="sm:hidden"/>
+              <h1 className="mt-3 text-3xl lg:text-4xl sm:text-3xl tracking-tighter font-bold slide-in">
+              Binngo: Doorstep to Dumpster Solution
+              <br className="sm:hidden"/>
               <span className="text-base sm:text-lg ml-5 font-medium tracking-tight text-red-400 mb-4 text-right sm:w-3/5 w-4/5">
-                ...Your Ally to Better Living
+                ...Bin your trash, then Go relax.
               </span>
               </h1>
               <p className="font-light text-lg mt-2">
@@ -208,9 +208,12 @@ const HowItWorksCarousel = () => {
       <div className="flex justify-start " >
         <div className=" w-full">
           <h4 className="text-3xl sm:text-4xl font-bold mb-4 text-center">
-            How BinNGo Works 
+            How it Works 
           </h4>
-            <ul className="hidden lg:flex px-3" >
+            {/* <ul className="hidden lg:flex px-3" > */}
+            <ul className="flex justify px-3" >            
+            <div className="block">
+
               <DetailList
                 title="Equip"
                 details="We provide tailored trash bins for all units within our service area."
@@ -232,11 +235,12 @@ const HowItWorksCarousel = () => {
                  details="After collection, we ensure your area is neat and tidy, leaving no trace behind but cleanliness."
                  imgName="clean"
               />
-              
+                          </div>
+
             </ul>
-            <div className="lg:hidden w-full">
+            {/* <div className="lg:hidden w-full">
               <HowItWorksCarousel />
-            </div>
+            </div> */}
 
         </div>
   
@@ -245,29 +249,29 @@ const HowItWorksCarousel = () => {
         <h4 className="text-3xl sm:text-4xl font-bold mb-4 mt-8 text-center">
           Customer Concerns
         </h4>
-        <div className=" hidden lg:flex">
+        <div className=" block lg:flex">
               <ConcernList
                 person="Jason"
-                location="Louisiana, USA"
+                // location="Louisiana, USA"
                 imgName="person1"
-                concern="Walking to the dumpster after dark feels risky and inconvenient, especially when I'm back late from work."
+                concern="I find it really tough to take out the trash during bad weather, especially since the dumpster is so far away."
               />
               <ConcernList
                 person="Becky"
-                location="Oklahoma, USA"
+                // location="Oklahoma, USA"
                 imgName="person2"
-                concern="The dumpster is too far from my unit, and it's exhausting to carry heavy trash bags that distance after a long day."
+                concern="The dumpster is way too far from my place, and after a long day, hauling those heavy trash bags all that way just wears me out."
               />
               <ConcernList
                 person="Chris"
-                location="Indiana, USA"
+                // location="Indiana, USA"
                 imgName="person3"
                 concern="Walking to the dumpster late at night makes me uncomfortable. It&apos;s poorly lit and quite isolated, which doesn&apos;t feel safe"
               />
         </div>
-        <div className="lg:hidden">
+        {/* <div className="lg:hidden">
           <CustomerConcernCarausel />
-        </div>
+        </div> */}
       </div>
       <div className="w-full " id="contactUs">
       <h1 className="text-3xl sm:text-4xl font-bold mb-4 mt-8 text-center">
@@ -275,14 +279,13 @@ const HowItWorksCarousel = () => {
       </h1>
       
       <p className="font-light text-lg">
-      Ready to simplify your trash disposal? Have questions or need more details? Contact us today! Just click below and you&apos;ll be directed to email our management team. We&apos;re here to help you with your waste management needs. 
+        Ready to simplify your trash disposal? Have questions or need more details? Contact us today! Just click below and you&apos;ll be directed to email our management team. We&apos;re here to help you with your waste management needs. 
       <a 
       className="text-lg text-red-900 mx-2 underline"
-      href="mailto:chinedunwosu54@gmail.com?subject=Enquiry%20about%20BinNGo%20">Click here</a>to send a mail.
+      href="mailto:support@thebinngo.com?subject=Enquiry%20about%20BinNGo%20">Click here</a>to send a mail.
       </p>
       </div>
       </div>
-      
     </div>
     </div>
     <Footer />
