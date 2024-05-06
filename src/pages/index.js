@@ -15,10 +15,10 @@ export default function Home() {
 
   const ConcernList =(props) =>{
     return(
-      <div className="sm:m-2 p-2 flex justify-center sm:w-4/5 w-full">
-        <div className="w-full sm:w-11/12">
+      <div className="sm:m p-2 flex justify-center sm:w-4/5 w-full ml-10">
+        <div className="w-full">
           <h3 className="text-3xl text-center">{props.person}</h3>
-          <h3 className="text-lg text-center mb-2 font-light">{props.location}</h3>
+          <h3 className="text-center mb-2 font-light">{props.location}</h3>
           <div className="border-3 border-opacity-50 border-red-900 rounded-b-full rounded-t-3xl p-3 darkBlue text-white w-full h-80 p-5">
           <div className="flex justify-center">
           <Image 
@@ -29,7 +29,7 @@ export default function Home() {
             alt={props.imgName}
           />
           </div>
-          <div className="w-full p-3 text-center"><p className="font-extralight">{props.concern}</p></div>
+          <div className="w-full pt-2 text-center text-sm"><p className="font-extralight">{props.concern}</p></div>
         </div>
         </div>
       </div>
@@ -41,7 +41,8 @@ export default function Home() {
     return(
       <>
       <div
-        className="my-2 text-lg font-light mx-2 lg:w-1/4 w-full flex justify-center">
+        // className="my-2 text-lg font-light mx-2 lg:w-1/4 w-full flex justify-center">
+        className="my-2 text-lg font-light mx-2 flex justify-center w-full sm:w-1/2 md:w-1/3 md:ml-20 lg:ml-8 lg:w-1/5 p-4 justify-self-center">
         <div className="rounded-md border-2 p-4">
         <h1
         className="text-2xl font-bold mx-1 text-center">
@@ -205,21 +206,20 @@ const HowItWorksCarousel = () => {
         </div>
        
       </div>
-      <div className="flex justify-start " >
+      <div className="flex justify-start" >
         <div className=" w-full">
           <h4 className="text-3xl sm:text-4xl font-bold mb-4 text-center">
             How it Works 
           </h4>
             {/* <ul className="hidden lg:flex px-3" > */}
             <ul className="flex justify px-3" >            
-            <div className="block">
+            <div className="block md:flex  flex-wrap">
 
               <DetailList
                 title="Equip"
                 details="We provide tailored trash bins for all units within our service area."
                 imgName="equip"
               />
-              
               <DetailList
                 title="Dispose"
                  details="Simply dispose of your trash into the provided bins at your convenience"
@@ -249,7 +249,8 @@ const HowItWorksCarousel = () => {
         <h4 className="text-3xl sm:text-4xl font-bold mb-4 mt-8 text-center">
           Customer Concerns
         </h4>
-        <div className=" block lg:flex">
+        <div className="flex justify center">
+          <div className="block lg:flex w-4/5 md:ml-16">
               <ConcernList
                 person="Jason"
                 // location="Louisiana, USA"
@@ -268,6 +269,7 @@ const HowItWorksCarousel = () => {
                 imgName="person3"
                 concern="Walking to the dumpster late at night makes me uncomfortable. It&apos;s poorly lit and quite isolated, which doesn&apos;t feel safe"
               />
+          </div>
         </div>
         {/* <div className="lg:hidden">
           <CustomerConcernCarausel />
