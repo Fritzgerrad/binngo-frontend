@@ -17,19 +17,20 @@ export default function Home() {
     return(
       <div className="sm:m p-2 flex justify-center sm:w-4/5 w-full ml-10">
         <div className="w-full">
-          <h3 className="text-3xl text-center">{props.person}</h3>
+          {/* <h3 className="text-3xl text-center">{props.person}</h3> */}
           <h3 className="text-center mb-2 font-light">{props.location}</h3>
           <div className="border-3 border-opacity-50 border-red-900 rounded-b-full rounded-t-3xl p-3 darkBlue text-white w-full h-80 p-5">
           <div className="flex justify-center">
           <Image 
             src={`/assets/${props.imgName}.jpeg`}
             height={20}
-            className="w-36 rounded-full"
+            className="w-28 rounded-full"
             width={120}
             alt={props.imgName}
           />
           </div>
-          <div className="w-full pt-2 text-center text-sm"><p className="font-extralight">{props.concern}</p></div>
+          <div className="w-full pt-2 text-center text-sm"><p className="font-extralight leading-5"><span className="text-xl leading-5">&ldquo;</span>{props.concern}<span className="text-xl leading-5">&rdquo;</span></p></div>
+          <div className="text-center mt-3 text-xl">- {props.person}</div>
         </div>
         </div>
       </div>
@@ -171,7 +172,7 @@ const HowItWorksCarousel = () => {
         <title>BinNGo</title>
         <link rel="icon" href="/assets/logoBin.png" />
       </Head>
-    <div className="p-4 sm:px-6" id="#top">
+    <div className="p-4 sm:px-4" id="#top">
 
       <Header />
       <div className="flex justify-center">
@@ -189,14 +190,14 @@ const HowItWorksCarousel = () => {
                   height={10}
                 />
             </div>
-            <div className="block sm:px-5 items-center lg:w-3/5">
+            <div className="block sm:px-5 items-center lg:w-4/5">
             
               <h1 className="mt-3 text-3xl lg:text-4xl sm:text-3xl tracking-tighter font-bold slide-in">
               Binngo: Doorstep to Dumpster Solution
-              <br className="sm:hidden"/>
-              <span className="text-base sm:text-lg ml-5 font-medium tracking-tight text-red-400 mb-4 text-right sm:w-3/5 w-4/5">
-                ...Bin your trash, then Go relax.
-              </span>
+              <br className=""/>
+              <div className="text-base sm:text-lg font-medium tracking-tighter text-center leading-5 my-2 italic">
+                ...Bin your trash, then Go relax   -we&apos;ll handle the rest
+              </div>
               </h1>
               <p className="font-light text-lg mt-2">
                 We believe that managing household waste <span id="howItWorks"></span>should be simple, clean, and environmentally friendly. We handle the mess so you don&apos;t have to. Founded by a team passionate about sustainability and convenience, our mission is to make trash collection seamless and hassle-free. We&apos;re not just a service; we&apos;re your ally to a cleaner, greener home. Let us take care of the waste, so you can focus on what truly matters in your life.
@@ -261,13 +262,13 @@ const HowItWorksCarousel = () => {
                 person="Becky"
                 // location="Oklahoma, USA"
                 imgName="person2"
-                concern="The dumpster is way too far from my place, and after a long day, hauling those heavy trash bags all that way just wears me out."
+                concern="The dumpster is too far from my place, and after a long day, hauling those heavy trash bags all that way just wears me out."
               />
               <ConcernList
                 person="Chris"
                 // location="Indiana, USA"
                 imgName="person3"
-                concern="Walking to the dumpster late at night makes me uncomfortable. It&apos;s poorly lit and quite isolated, which doesn&apos;t feel safe"
+                concern="Walking to the dumpster at night makes me uncomfortable. It&apos;s poorly lit and quite isolated, which doesn&apos;t feel safe."
               />
           </div>
         </div>
