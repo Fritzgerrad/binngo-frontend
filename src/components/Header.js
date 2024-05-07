@@ -26,6 +26,7 @@ const Header = () => {
         <div className="m-5 header w-4/5 rounded-full fixed px-5">
           <div className="w-full mx-5">
             <Image
+            id="home"
               src="/assets/logoDark.jpeg"
               alt="logo"
               className="float-left m-5"
@@ -49,7 +50,6 @@ const Header = () => {
                 className=" font-bold hover:underline"
               >
                 Home </button>
-              <MyLink href="#home" text="About Us" />
               <MyLink href="#howItWorks" text="How it Works" />
               <MyLink href="#contactUs" text="Contact Us" />
             </ul>
@@ -67,8 +67,7 @@ const Header = () => {
             <nav>
             <div className="h-24 sm:h-0 bg-white"></div>
               <ul className="header float-right px-10">
-                <MyLink href="#home" text="Home" />
-                <MyLink href="#home" text="About Us" />
+                <MyLink href="#top" text="Home" />
                 <MyLink href="#howItWorks" text="How it Works" />
                 <MyLink href="#contactUs" text="Contact Us" />
               </ul>

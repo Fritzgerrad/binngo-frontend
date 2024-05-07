@@ -50,9 +50,9 @@ const Footer = () => {
                             <Link href="#top" className="uppercase text-xs hover:text-red-600 m-2">Accessibility</Link>
                         </div>
                     </div>
-                    <div className="md:float-right flex text-xs">
+                    <div className="md:float-right flex justify-center text-xs">
                         <Link href="#top" className="text-xs text-red-600 mr-3 hover:underline ml-2">Back to Top</Link>
-                        <p className="text-white">&#169; 2024 FRZ Group</p>
+                        {/* <p className="text-white">&#169; 2024 FRZ Group</p> */}
                     </div>
                 </div>
             </div>
