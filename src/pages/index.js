@@ -200,7 +200,10 @@ const HowItWorksCarousel = () => {
               </div>
               </h1>
               <p className="font-light text-lg mt-2">
-                We believe that managing household waste <span id="howItWorks"></span>should be simple, clean, and environmentally friendly. We handle the mess so you don&apos;t have to. Founded by a team passionate about sustainability and convenience, our mission is to make trash collection seamless and hassle-free. We&apos;re not just a service; we&apos;re your ally to a cleaner, greener home. Let us take care of the waste, so you can focus on what truly matters in your life.
+                We believe that managing household waste <span id="howItWorks"></span>should be simple, clean, and environmentally friendly. We handle the mess so you don&apos;t have to. 
+              </p>
+              <p className="font-light text-lg mt-2">
+                Founded by a team passionate about sustainability and convenience, our mission is to make trash collection seamless and hassle-free. We&apos;re not just a service; we&apos;re your ally to a cleaner, greener home. Let us take care of the waste, so you can focus on what truly matters in your life.
               </p>
             </div>
           </div>
@@ -236,7 +239,8 @@ const HowItWorksCarousel = () => {
                  details="After collection, we ensure your area is neat and tidy, leaving no trace behind but cleanliness."
                  imgName="clean"
               />
-                          </div>
+                          
+              </div>
 
             </ul>
             {/* <div className="lg:hidden w-full">
