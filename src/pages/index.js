@@ -51,7 +51,7 @@ export default function Home() {
         </h1>
         <div className="flex justify-center m-2">
           <Image 
-            src={`/assets/${props.imgName}.jpeg`}
+            src={`/assets/${props.imgName}.png`}
             className=""
             alt={props.imgName}
             height={10}
