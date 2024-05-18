@@ -6,7 +6,8 @@ const Footer = () => {
         return(
             <a
                 className="text-2xl "
-                href={`https://www.${props.link}.com`}
+                href={props.link}
+
                 target="_blank">
                 {props.logo}
             </a>
@@ -26,15 +27,15 @@ const Footer = () => {
                             />
                             <SocialMedia 
                                 logo={<FaInstagram />} 
-                                link="instagram"
+                                link="https://www.instagram.com/thebinngo/"
                             />
                             <SocialMedia 
                                 logo={<FaFacebookF />} 
-                                link="facebook"
+                                link="https://www.facebook.com"
                             />
                             <SocialMedia 
                                 logo={<FaLinkedinIn />} 
-                                link="linkedin"
+                                link="https://www.twitter.com"
                             />
                         </div>
                     </div>
