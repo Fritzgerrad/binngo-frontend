@@ -281,7 +281,7 @@ const HowItWorksCarousel = () => {
         </div> */}
       </div>
       <div className="w-full " id="contactUs">
-      <h1 className="text-3xl sm:text-4xl font-bold mb-4 mt-8 text-center">
+      {/* <h1 className="text-3xl sm:text-4xl font-bold mb-4 mt-8 text-center">
           Contact Us          
       </h1>
       
@@ -290,7 +290,7 @@ const HowItWorksCarousel = () => {
       <a 
       className="text-lg text-red-900 mx-2 underline"
       href="mailto:support@thebinngo.com?subject=Enquiry%20about%20BinNGo%20">Click here</a>to send a mail.
-      </p>
+      </p> */}
       </div>
       </div>
     </div>
